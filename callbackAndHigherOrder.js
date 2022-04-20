@@ -214,9 +214,9 @@ const getUserById = (array7, id, callback7) => {
 // RUN THIS FILE WITH NODE
 // CHECK YOUR ANSWER
 
-getUserById(users, '16t', user => {
-  console.log('The user with the id 16t has the email of ' + user.email + ' the name of ' + user.name + ' and the address of ' + user.address) 
-})
+// getUserById(users, '16t', user => {
+//   console.log('The user with the id 16t has the email of ' + user.email + ' the name of ' + user.name + ' and the address of ' + user.address) 
+// })
 
 ////////// CHALLENGE //////////
 
@@ -236,6 +236,12 @@ getUserById(users, '16t', user => {
 
 // CODE HERE
 
+const addingFactory = num1 => {
+  return function (num2) {
+    return num1 + num2
+  };
+};
+
 /*
   Now that you have addingFactory, you can create other
   functions from it. 
@@ -250,6 +256,8 @@ getUserById(users, '16t', user => {
 
 // CODE HERE
 
+const addTen = addingFactory(10);
+
 /*
   Now the inner function is stored in the addTen variable! 
 
@@ -261,6 +269,9 @@ getUserById(users, '16t', user => {
 */
 
 // CODE HERE
+
+console.log(addTen(12));
+console.log(addTen(15));
 
 /*
   Let's make another function from the addingFactory. 
@@ -274,3 +285,6 @@ getUserById(users, '16t', user => {
 */
 
 // CODE HERE
+
+
+

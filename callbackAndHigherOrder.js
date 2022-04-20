@@ -167,7 +167,7 @@ const each = (array6, callback6) => {
 
 // CODE HERE
 
-each (names, (items, index2) => console.log(`The item at index ${index2} is ${items}.`))
+// each (names, (items, index2) => console.log(`The item at index ${index2} is ${items}.`))
 
 ////////// PROBLEM 7 //////////
 
@@ -202,14 +202,21 @@ var users = [
 
 // CODE HERE 
 
+const getUserById = (array7, id, callback7) => {
+  for ( i = 0; i < array7.length; i++){
+    if (array7[i].id === id) {
+      return callback7(array7[i]);
+    };
+  };
+};
 
 // UNCOMMENT THE FUNCTION CALL BELOW
 // RUN THIS FILE WITH NODE
 // CHECK YOUR ANSWER
 
-// getUserById(users, '16t', user => {
-//   console.log('The user with the id 16t has the email of ' + user.email + ' the name of ' + user.name + ' and the address of ' + user.address) 
-// })
+getUserById(users, '16t', user => {
+  console.log('The user with the id 16t has the email of ' + user.email + ' the name of ' + user.name + ' and the address of ' + user.address) 
+})
 
 ////////// CHALLENGE //////////
 

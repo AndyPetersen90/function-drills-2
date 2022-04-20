@@ -83,18 +83,25 @@ const last = (array2, callback3) => callback3(array2[array2.length - 1]);
 
 // CODE HERE 
 
+const contains = (array3, name1, callback4) => {
+  if (array3.includes(name1) === true) {
+    callback4(true);
+  } else {
+    callback4(false);
+  }
+}
 
 // UNCOMMENT THE FUNCTION CALL BELOW
 // RUN THIS FILE WITH NODE
 // CHECK YOUR ANSWER
 
-// contains(names, 'Colt', result => {
-//   if(result === true){
-//     console.log('Colt is in the array')
-//   } else {
-//     console.log('Colt is not in the array')
-//   }
-// })
+contains(names, 'Colt', result => {
+  if(result === true){
+    console.log('Colt is in the array')
+  } else {
+    console.log('Colt is not in the array')
+  }
+})
 
 
 

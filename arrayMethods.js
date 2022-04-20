@@ -110,9 +110,9 @@ const orders = [{"price":15,"tax":0.09},{"price":42,"tax":0.07},{"price":56,"tax
 
 // CODE HERE
 
-const orderTotal = orders.map(callback => callback.price * (callback.tax + 1));
+// const orderTotal = orders.map(callback => callback.price * (callback.tax + 1));
 
-console.log(orderTotal);
+// console.log(orderTotal);
 
 
 ////////// PROBLEM 6 //////////
@@ -132,3 +132,9 @@ const purchases = [{"owner":"Barry","price":103},{"owner":"Bob","price":75},
 */
 
 // CODE HERE
+
+const bobsTotal = purchases.filter(nameBob => nameBob.owner === 'Bob').reduce((accumulator, current) => accumulator + current.price, 0);
+
+console.log(bobsTotal);
+
+

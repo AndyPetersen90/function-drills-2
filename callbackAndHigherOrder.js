@@ -138,7 +138,7 @@ const uniq = (array5, callback5) => {
 
 // CODE HERE
 
-uniq(names, uniqArr => console.log (`The new names array with all the duplicate items removed is ${uniqArr}.`));
+// uniq(names, uniqArr => console.log (`The new names array with all the duplicate items removed is ${uniqArr}.`));
 
 
 
@@ -146,11 +146,17 @@ uniq(names, uniqArr => console.log (`The new names array with all the duplicate 
 
 /* 
   Write a function called each that takes in an array of names and a callback function. 
-  For each name in the array, invoke the callback and pass in the name and the name's index as arguments.
+  For each name in the array, invoke the callback and pass in the name and the name's index 
+  as arguments.
 */
+
+// var names = ['Tyler', 'Cahlan', 'Ryan', 'Colt', 'Tyler', 'Blaine', 'Cahlan']
 
 // CODE HERE 
 
+const each = (array6, callback6) => {
+  array6.forEach((element, index) => callback6(element, index));
+}
 
 /*
   Invoke the each function, passing in the names array and a callback function.
@@ -161,11 +167,13 @@ uniq(names, uniqArr => console.log (`The new names array with all the duplicate 
 
 // CODE HERE
 
+each (names, (items, index2) => console.log(`The item at index ${index2} is ${items}.`))
 
 ////////// PROBLEM 7 //////////
 
 /*
-  Write a function called getUserById that takes in three parameters: an array of objects (users), an id and a callback, and searches for the user with a matching id.
+  Write a function called getUserById that takes in three parameters: an array of objects (users), 
+  an id and a callback, and searches for the user with a matching id.
   When the correct user object is found, invoke the callback with the user object as an argument.
 */
 

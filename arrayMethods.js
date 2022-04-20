@@ -89,9 +89,9 @@ const monstersInYourPocket = [{"monster":"Bulbabunny","CP":156},{"monster":"Bulb
 
 // CODE HERE
 
-const myStrongest = monstersInYourPocket.filter(combatPower => combatPower.CP > 200);
+// const myStrongest = monstersInYourPocket.filter(combatPower => combatPower.CP > 200);
 
-console.log(myStrongest);
+// console.log(myStrongest);
 
 ////////// PROBLEM 5 //////////
 
@@ -103,11 +103,16 @@ const orders = [{"price":15,"tax":0.09},{"price":42,"tax":0.07},{"price":56,"tax
 // Do not edit code above.
 
 /*
-  Use a higher order method to get all the order totals after adding in the sales tax (given to you as a tax rate, hint: you'll need to do some multiplication). Your answer should be an array of numbers, one total for each order.
+  Use a higher order method to get all the order totals after adding in the sales tax 
+  (given to you as a tax rate, hint: you'll need to do some multiplication). Your answer should be an array of numbers, 
+  one total for each order.
 */
 
 // CODE HERE
 
+const orderTotal = orders.map(callback => callback.price * (callback.tax + 1));
+
+console.log(orderTotal);
 
 
 ////////// PROBLEM 6 //////////

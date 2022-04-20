@@ -1,12 +1,14 @@
 ////////// PROBLEM 1 //////////
 
 /*
-  Write a function called multiply that takes in three parameters: two numbers and a callback function.  
+  Write a function called multiply that takes in three parameters: two numbers and a 
+  callback function.  
   Invoke the callback, passing in the product of the two numbers multiplied as the argument. 
 */
 
 // CODE HERE
 
+const multiply = (num1, num2, callback1) => callback1(num1 * num2);
 
 // UNCOMMENT THE FUNCTION CALL BELOW
 // RUN THIS FILE WITH NODE
@@ -37,6 +39,7 @@ var names = ['Tyler', 'Cahlan', 'Ryan', 'Colt', 'Tyler', 'Blaine', 'Cahlan']
 
 // CODE HERE 
 
+const first = (array1, callback2) => callback2(array1[0]);
 
 // UNCOMMENT THE FUNCTION CALL BELOW
 // RUN THIS FILE WITH NODE
@@ -57,6 +60,7 @@ var names = ['Tyler', 'Cahlan', 'Ryan', 'Colt', 'Tyler', 'Blaine', 'Cahlan']
 
 // CODE HERE
 
+const last = (array2, callback3) => callback3(array2[array2.length - 1]);
 
 // UNCOMMENT THE FUNCTION CALL BELOW
 // RUN THIS FILE WITH NODE

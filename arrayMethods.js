@@ -59,9 +59,10 @@ const populations = [8175133, 3792621, 2695598, 2100263];
 */
 
 // CODE HERE
-const totalPopulation = populations.reduce((acc, curr) => acc + curr);
 
-console.log(totalPopulation);
+// const totalPopulation = populations.reduce((acc, curr) => acc + curr);
+
+// console.log(totalPopulation);
 
 
 
@@ -81,14 +82,16 @@ const monstersInYourPocket = [{"monster":"Bulbabunny","CP":156},{"monster":"Bulb
 
 /*
   Now we're going to ramp these up a little bit.
-  Instead of just arrays of numbers, we are going to have an array of objects that we want to use map, filter, and reduce with.
+  Instead of just arrays of numbers, we are going to have an array of objects that we want to use map, filter, 
+  and reduce with.
   Use the filter method to return only the monsters that have a CP of over 200.
 */
 
 // CODE HERE
-// const myStrongest // = monstersInYourPocket.filter(/* Provide Your Callback Here */)
 
+const myStrongest = monstersInYourPocket.filter(combatPower => combatPower.CP > 200);
 
+console.log(myStrongest);
 
 ////////// PROBLEM 5 //////////
 

@@ -95,13 +95,13 @@ const contains = (array3, name1, callback4) => {
 // RUN THIS FILE WITH NODE
 // CHECK YOUR ANSWER
 
-contains(names, 'Colt', result => {
-  if(result === true){
-    console.log('Colt is in the array')
-  } else {
-    console.log('Colt is not in the array')
-  }
-})
+// contains(names, 'Colt', result => {
+//   if(result === true){
+//     console.log('Colt is in the array')
+//   } else {
+//     console.log('Colt is not in the array')
+//   }
+// })
 
 
 
@@ -109,11 +109,25 @@ contains(names, 'Colt', result => {
 
 /*
   Write a function called uniq that takes in an array and a callback function.
-  Remove any duplicate values from the array, and invoke the callback with the modified array as an argument.
+  Remove any duplicate values from the array, and invoke the callback with the modified array as 
+  an argument.
   Hint: you can use a nested for loop to do this.
 */
 
-// CODE HERE
+// CODE HERE 
+// var names = ['Tyler', 'Cahlan', 'Ryan', 'Colt', 'Tyler', 'Blaine', 'Cahlan']
+
+const uniq = (array5, callback5) => {
+  for ( i = 0; i < array5.length; i++){
+    for (j = i + 1; j < array5.length; j++){
+      if (array5[i] === array5[j]){
+        array5.splice(j, 1);
+        j--;
+      }
+    }
+  }
+  callback5(array5);
+}
 
 /*
   Invoke the uniq function, passing in the names array from above and a callback function.
@@ -123,6 +137,8 @@ contains(names, 'Colt', result => {
 */
 
 // CODE HERE
+
+uniq(names, uniqArr => console.log (`The new names array with all the duplicate items removed is ${uniqArr}.`));
 
 
 
